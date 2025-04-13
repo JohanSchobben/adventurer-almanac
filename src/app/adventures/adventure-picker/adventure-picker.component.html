@@ -1,0 +1,7 @@
+@for (adv of adventures(); track adv.slug) {
+  <div>
+    <a [routerLink]="['/', 'journey', adv.slug]">{{adv.name}}</a>
+  </div>
+}
+
+<button (click)="createNewAdventure()">Create new Adventure</button>

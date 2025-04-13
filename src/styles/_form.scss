@@ -1,0 +1,17 @@
+@use "abstracts" as abs;
+
+.input {
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: 2px solid #DDD;
+  background-color: abs.$surface;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  color: abs.$depth;
+  &:focus {
+    border-color: abs.$primary-light;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(176, 48, 96, 0.1);
+  }
+}

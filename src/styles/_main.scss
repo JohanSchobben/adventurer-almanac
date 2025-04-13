@@ -1,0 +1,16 @@
+@use "abstracts" as abs;
+*,*:before,*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+aa-root {
+  height: 100%;
+}
+
+html {
+  background: abs.$background-color;
+}

@@ -1,7 +1,18 @@
-@for (adv of adventures(); track adv.slug) {
-  <div>
-    <a [routerLink]="['/', 'journey', adv.slug]">{{adv.name}}</a>
-  </div>
-}
+<h1>Adventure Almanac</h1>
 
-<button (click)="createNewAdventure()">Create new Adventure</button>
+<ul>
+  @for (adv of adventures(); track adv.slug) {
+    <li>
+      <a [routerLink]="['/', 'journey', adv.slug]">{{adv.name}}</a>
+    </li>
+  }
+</ul>
+
+<div class="create-part">
+  @if (editMode()) {
+    <input class="input" #input>
+    <button class="btn btn-primary button" (click)="createNewAdventure(input.value)">Create</button>
+  } @else {
+    <button class="btn btn-primary button" (click)="changeMode()">Create new Adventure</button>
+  }
+</div>

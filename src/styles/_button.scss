@@ -1,0 +1,24 @@
+@use "abstracts" as abs;
+.btn {
+  background-color: abs.$primary-button-background;
+  color: abs.$primary-button-text-color;
+  font-family: 'Inter', sans-serif;
+  padding: 0.875em 1.5em;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  &:hover {
+    transform: translateY(-2px);
+  }
+  &-primary {
+    background: abs.$primary-button-background;
+    color: abs.$primary-button-text-color;
+    box-shadow: abs.$primary-button-box-shadow;
+    &:hover {
+      background: abs.$primary-button-background-hover;
+      box-shadow: abs.$primary-button-box-shadow-hover;
+    }
+  }
+}
